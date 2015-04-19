@@ -1,0 +1,30 @@
+.footer {
+	text-align: center;
+	background-color: $color-darker;
+	color: $color-lighter;
+	border-top: 2px solid $color-pink;
+	padding: 40px 0 20px;
+	font-size: 14px;
+
+	&__deco {
+		text-align: center;
+		height: 232px;
+		background: url(../img/footer.png) center no-repeat;
+		background-size: 1260px auto;
+		position: relative;
+		z-index: 1;
+		top: 23px;
+
+		a {
+			display: inline-block;
+			width: 348px;
+			height: 40px;
+			background: url(../img/footer-title.png) no-repeat;
+			background-size: 348px 40px;
+			text-indent: 100%;
+			overflow: hidden;
+			white-space: nowrap;
+			margin-top: 20px;
+		}
+	}
+}

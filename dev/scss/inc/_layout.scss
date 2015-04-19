@@ -1,0 +1,20 @@
+.container {
+	max-width: 1010px;
+	padding: 0 15px;
+	margin: 0 auto;
+
+	&--main {
+		@include clearfix;
+		margin-bottom: 60px;
+	}
+}
+
+.main {
+	@include calc(width, "100% - 330px");
+	float: left;
+}
+
+.aside {
+	width: 300px;
+	float: right;
+}

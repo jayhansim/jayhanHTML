@@ -1,0 +1,16 @@
+// button
+.btn {
+	border-radius: 2px;
+	background: $color-pink;
+	color: #fff;
+	display: inline-block;
+	height: 40px;
+	padding: 9px 20px;
+
+	&:hover {
+		text-decoration: none;
+		background-color: darken($color-pink,5);
+	}
+}
+
+// form

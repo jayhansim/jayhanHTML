@@ -1,0 +1,32 @@
+// accessing local Roboto
+// ref: https://jonsuh.com/blog/font-loading-with-font-events/
+@font-face {
+  font-family: "RobotoLocal";
+  src: local("Roboto-Regular");
+}
+
+@font-face {
+  font-family: "RobotoLocal-bold";
+  src: local("Roboto-Bold");
+}
+
+@font-face {
+  font-family: "RobotoLocal-black";
+  src: local("Roboto-Black");
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-system-black;
+	font-weight: normal;
+	color: $color-darker;
+
+	.wf-active & {
+		font-family: $font;
+		font-weight: 900;
+	}
+}
+
+h1, h2 {
+	line-height: 1.1;
+}

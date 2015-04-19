@@ -1,0 +1,19 @@
+// var & mixin
+@import "bourbon";
+@import "inc/_var";
+@import "inc/_mixin";
+
+// normalize
+@import "inc/normalize";
+
+// critical parts
+@import "inc/_global";
+@import "inc/_typography";
+@import "inc/_layout";
+@import "inc/_header";
+
+@import "inc/_article";
+
+@import "inc/_form";
+@import "inc/_sidebar";
+@import "inc/_footer";

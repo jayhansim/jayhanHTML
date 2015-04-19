@@ -1,0 +1,110 @@
+.article {
+	@include block;
+
+
+	&--loop {
+		margin-bottom: 45px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	&__header, &__content {
+		@include calc(padding-left, '(100% - 550px)/2');
+		@include calc(padding-right, '(100% - 550px)/2');
+	}
+
+	&__header {
+		padding: 45px -webkit-calc((100% - 550px)/2) 20px;
+		padding: 45px calc((100% - 550px)/2) 20px;
+		border-bottom: 1px dotted rgba($color-lighter, .2);
+		position: relative;
+
+		&::before {
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			left: -20px;
+			background: rgba($color-pink,.1);
+			border-radius: 50%;
+			content: '';
+			margin-top: -4px;
+		}
+	}
+
+	&__content {
+		padding: 45px -webkit-calc((100% - 550px)/2);
+		padding: 45px calc((100% - 550px)/2);
+
+		> *:last-child {
+			.article--loop & {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 30px;
+		line-height: 1.1;
+		margin-top: 0;
+
+		a {
+			color: $color-darker;
+  		background-position: 0 90%;
+  		background-repeat: no-repeat;
+  		background-size: 0 15px;
+  		@include linear-gradient(to bottom, transparent 50%, rgba($color-pink,.85) 50%);
+  		@include transition-duration(.3s);
+
+			&:hover {
+				text-decoration: none;
+				background-size: 100% 15px;
+			}
+		}
+
+	}
+
+	&__meta {
+		font-size: 13px;
+		color: $color-lighter;
+
+		> div {
+			display: inline-block;
+			padding-right: 20px;
+		}
+
+		a {
+			color: $color-lighter;
+
+			&:hover {
+				color: $color-pink;
+			}
+		}
+	}
+}
+
+.icon {
+	display: inline-block;
+
+	&__meta {
+		width: 12px;
+		height: 13px;
+		background: url(../img/icon-sprites.svg) no-repeat;
+		margin-right: 5px;
+		vertical-align: -2px;
+
+		&--date {background-position: 0 0}
+		&--category {background-position: -12px 0}
+		&--comment {background-position: -24px 0}
+		&--supporter {background-position: -36px 0}
+		&--search {background-position: -48px 0}
+		&--popular {background-position: -60px 0}
+	}
+}
+
+.pagination {
+	margin-top: 30px;
+	@include display(flex);
+	@include justify-content(space-between);
+}
