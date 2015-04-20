@@ -11,6 +11,53 @@
 		text-decoration: none;
 		background-color: darken($color-pink,5);
 	}
+
+	&__search {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: transparent;
+		color: $color-lighter;
+
+		&::before {
+			content: '|';
+			position: relative;
+			left: -15px;
+			top: -1px;
+			opacity: .3;
+		}
+
+		&:hover {
+			background-color: inherit;
+			color: $color-pink;
+		}
+	}
+}
+
+button.btn {
+	border: none;
 }
 
 // form
+.input-group {
+	position: relative;
+}
+.form-control {
+	border-radius: 2px;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0,0,0,.1);
+	height: 40px;
+	border: none;
+	padding: 9px 15px;
+	display: block;
+	width: 100%;
+
+	&:focus, &:active {
+		outline: 0;
+		box-shadow: 0 2px 4px rgba(0,0,0,.2);
+	}
+
+	#searchform & {
+		padding-right: 70px;
+	}
+}

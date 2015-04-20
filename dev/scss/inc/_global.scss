@@ -7,7 +7,7 @@ body {
 	color: $color;
 	font-size: 15px;
 	font-family: $font-system;
-	line-height: 1.5;
+	line-height: 1.6;
 
 	.wf-active & {
 		font-family: $font;
@@ -32,7 +32,7 @@ ul, ol {
 
 			li {
 				position: relative;
-				padding-left: 15px;
+				padding-left: 18px;
 
 				&::before {
 					width: 6px;
@@ -42,8 +42,8 @@ ul, ol {
 					content: '';
 					display: inline-block;
 					position: absolute;
-					left: 0;
-					top: 7px;
+					left: 2px;
+					top: 8px;
 				}
 			}
 		}
