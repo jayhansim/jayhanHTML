@@ -18,3 +18,16 @@
 	width: 300px;
 	float: right;
 }
+
+@media (max-width: 991px) {
+	.main {
+		float: none;
+		width: auto;
+		margin-bottom: 60px;
+	}
+
+	.aside {
+		width: auto;
+		float: none;
+	}
+}

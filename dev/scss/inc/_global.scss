@@ -24,15 +24,21 @@ a {
 
 ul, ol {
 	padding: 0;
-	margin-top: 0;
 
 	@at-root {
+		ol {
+			padding-left: $margin;
+		}
 		ul {
 			list-style: none;
 
+			ul {
+				margin-bottom: 0;
+			}
+
 			li {
 				position: relative;
-				padding-left: 18px;
+				padding-left: $margin;
 
 				&::before {
 					width: 6px;
@@ -48,4 +54,14 @@ ul, ol {
 			}
 		}
 	}
+}
+
+// setting the block element margin
+p, ul, ol, dl, table, h1, h2, h3, h4, h5, h6, blockquote {
+	margin: 0 0 $margin;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }

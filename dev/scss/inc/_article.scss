@@ -10,11 +10,6 @@
 		}
 	}
 
-	&__header, &__content {
-		@include calc(padding-left, '(100% - 550px)/2');
-		@include calc(padding-right, '(100% - 550px)/2');
-	}
-
 	&__header {
 		padding: 45px -webkit-calc((100% - 550px)/2) 20px;
 		padding: 45px calc((100% - 550px)/2) 20px;
@@ -36,6 +31,7 @@
 	&__content {
 		padding: 45px -webkit-calc((100% - 550px)/2);
 		padding: 45px calc((100% - 550px)/2);
+		overflow: hidden;
 
 		> *:last-child {
 			.article--loop & {
@@ -80,6 +76,30 @@
 			&:hover {
 				color: $color-pink;
 			}
+		}
+	}
+
+	ul {
+		li::before {
+			background: $color-pink;
+		}
+		ul li::before {
+			background: transparent;
+		}
+	}
+
+	h2 {
+		position: relative;
+		padding-bottom: $margin;
+
+		&::after {
+			content: '';
+			width: 25px;
+			height: 2px;
+			background: $color-pink;
+			position: absolute;
+			left: 0;
+			bottom: 0;
 		}
 	}
 }
