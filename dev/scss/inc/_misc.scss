@@ -11,19 +11,7 @@ blockquote {
 	color: #fff;
 
 	.article & {
-		position: relative;
-		z-index: 1;
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			box-shadow: 300px 0 0 $color-pink, -300px 0 0 $color-pink;
-			width: 100%;
-			height: 100%;
-			z-index: -1;
-		}
+		box-shadow: 300px 0 0 $color-pink, -300px 0 0 $color-pink;
 	}
 
 	&.blockquote--light {
@@ -31,12 +19,10 @@ blockquote {
 		color: $color;
 
 		.article & {
-
-			&::before {
-				box-shadow: 300px 0 0 #f8f8f8, -300px 0 0 #f8f8f8;
-			}
+			box-shadow: 300px 0 0 #f8f8f8, -300px 0 0 #f8f8f8;
 
 			footer {
+				color: $color-lighter;
 				a {
 					color: $color-pink;
 				}
@@ -48,6 +34,10 @@ blockquote {
 		margin-top: $margin/2;
 		font-size: 13px;
 		color: #ffcdde;
+
+		&::before {
+			content: '- ';
+		}
 	}
 
 	cite {
@@ -61,4 +51,24 @@ blockquote {
 	> *:last-child {
 		margin-bottom: 0;
 	}
+}
+
+pre {
+	border-top: 1px solid #eed3dc;
+	background-color: #f8f8f8;
+	@include background-image(
+		linear-gradient(to bottom,
+										transparent 29px,
+										#c2d4e9 29px,
+										transparent 30px,
+										transparent 59px,
+										#eed3dc 59px
+										));
+	background-size: 60px 60px;
+	font-family: monospace;
+	line-height: 30px;
+	box-shadow: 300px 0 0 #f8f8f8, -300px 0 0 #f8f8f8;
+	-moz-tab-size: 4;
+  -o-tab-size:   4;
+  tab-size:      4;
 }
