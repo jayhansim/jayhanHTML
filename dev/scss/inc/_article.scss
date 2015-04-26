@@ -88,18 +88,9 @@
 		}
 	}
 
-	h2 {
-		position: relative;
-		padding-bottom: $margin;
-
-		&::after {
-			content: '';
-			width: 25px;
-			height: 2px;
-			background: $color-pink;
-			position: absolute;
-			left: 0;
-			bottom: 0;
+	&__content {
+		h2 {
+			@include heading-style();
 		}
 	}
 }
