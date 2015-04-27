@@ -33,6 +33,12 @@
 		padding: 45px calc((100% - 550px)/2);
 		overflow: hidden;
 
+		p {
+			+ h2, + h3, + h4, + h5, + h6 {
+				margin-top: $margin*2;
+			}
+		}
+
 		> *:last-child {
 			.article--loop & {
 				margin-bottom: 0;

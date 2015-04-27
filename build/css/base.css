@@ -347,6 +347,8 @@ h6, .h6 {
     padding: 45px -webkit-calc((100% - 550px)/2);
     padding: 45px calc((100% - 550px)/2);
     overflow: hidden; }
+    .article__content p + h2, .article__content p + h3, .article__content p + h4, .article__content p + h5, .article__content p + h6 {
+      margin-top: 40px; }
     .article--loop .article__content > *:last-child {
       margin-bottom: 0; }
   .article__title {
