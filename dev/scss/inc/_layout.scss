@@ -19,7 +19,7 @@
 	float: right;
 }
 
-@media (max-width: 991px) {
+@media (max-width: $screen-sm-max) {
 	.main {
 		float: none;
 		width: auto;

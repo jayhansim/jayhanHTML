@@ -13,3 +13,12 @@ $color-bg: #f4f4f4;
 
 // number
 $margin: 20px;
+
+// mq
+
+$screen-md 			: 992px;
+$screen-sm-max 	: $screen-md - 1px;
+$screen-sm 			: 768px;
+$screen-xs-max	: $screen-sm - 1px;
+$screen-640			: 640px;
+$screen-xs			: 480px;

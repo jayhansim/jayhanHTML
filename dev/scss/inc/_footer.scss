@@ -25,6 +25,11 @@
 			overflow: hidden;
 			white-space: nowrap;
 			margin-top: 20px;
+
+			@media (max-width: $screen-xs) {
+				width: 290px;
+				background-size: 290px auto;
+			}
 		}
 	}
 }

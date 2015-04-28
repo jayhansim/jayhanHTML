@@ -1,11 +1,11 @@
 .header {
-	margin-bottom: -30px;
+	margin-bottom: -10px;
 	@include calc(width, "100% - 330px");
 
 	&__title {
 		display: inline-block;
 		vertical-align: middle;
-
+		margin-bottom: 0;
 		padding-left: -webkit-calc((100% - 550px)/2);
 		padding-left: calc((100% - 550px)/2);
 
@@ -17,6 +17,12 @@
 			height: 111px;
 			background: url(../img/logo.svg) no-repeat;
 			display: block;
+
+			@media (max-width: $screen-sm-max) {
+				width: 180px;
+				height: 85px;
+				background-size: cover;
+			}
 		}
 	}
 
@@ -24,6 +30,19 @@
 		font-size: 12px;
 		color: lighten($color-lighter, 5);
 		display: inline-block;
-		width: 300px;
+		max-width: 300px;
+	}
+
+	@media (max-width: $screen-sm-max) {
+		width: auto;
+	}
+	@media (max-width: $screen-640) {
+		text-align: center;
+
+		&__description {
+			display: block;
+			width: auto;
+			max-width: none;
+		}
 	}
 }
