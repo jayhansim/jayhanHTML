@@ -35,14 +35,16 @@
 
 	@media (max-width: $screen-sm-max) {
 		width: auto;
-	}
-	@media (max-width: $screen-640) {
 		text-align: center;
 
 		&__description {
 			display: block;
 			width: auto;
 			max-width: none;
+		}
+
+		&__title {
+			padding-left: 0;
 		}
 	}
 }
