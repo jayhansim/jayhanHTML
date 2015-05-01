@@ -12,6 +12,11 @@
 .main {
 	@include calc(width, "100% - 330px");
 	float: left;
+
+	&--full {
+		width: auto;
+		float: none;
+	}
 }
 
 .aside {
@@ -30,4 +35,8 @@
 		width: auto;
 		float: none;
 	}
+}
+
+.content {
+	min-height: 80vh;
 }

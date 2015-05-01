@@ -11,7 +11,7 @@ blockquote {
 	color: #fff;
 
 	.article & {
-		box-shadow: 300px 0 0 $color-pink, -300px 0 0 $color-pink;
+		box-shadow: 200px 0 0 $color-pink, -200px 0 0 $color-pink;
 	}
 
 	&.blockquote--light {
@@ -19,7 +19,7 @@ blockquote {
 		color: $color;
 
 		.article & {
-			box-shadow: 300px 0 0 #f8f8f8, -300px 0 0 #f8f8f8;
+			box-shadow: 200px 0 0 #f8f8f8, -200px 0 0 #f8f8f8;
 
 			footer {
 				color: $color-lighter;
@@ -56,6 +56,7 @@ blockquote {
 pre {
 	border-top: 1px solid #eed3dc;
 	background-color: #f8f8f8;
+	-webkit-overflow-scrolling: touch;
 	@include background-image(
 		linear-gradient(to bottom,
 										transparent 29px,
@@ -67,7 +68,7 @@ pre {
 	background-size: 60px 60px;
 	font-family: monospace;
 	line-height: 30px;
-	box-shadow: 300px 0 0 #f8f8f8, -300px 0 0 #f8f8f8;
+	box-shadow: 200px 0 0 #f8f8f8, -200px 0 0 #f8f8f8;
 	-moz-tab-size: 4;
   -o-tab-size:   4;
   tab-size:      4;
